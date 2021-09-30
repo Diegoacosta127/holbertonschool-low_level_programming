@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "$CFILE" | gcc -E > main.c
+echo $CFILE | gcc -E > c
