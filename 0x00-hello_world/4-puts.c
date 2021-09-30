@@ -1,6 +1,7 @@
 #include <stdio.h>
-/*
- *4. Hello, puts
+/**
+ * main - akjsjbdksjdbgks
+ * Return: always 0
  */
 int main(void) /*Main*/
 {
