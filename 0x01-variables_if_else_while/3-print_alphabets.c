@@ -16,4 +16,5 @@ int main(void)
 		putchar(ch);
 	}
 	printf("\n");
+	return (0);
 }
