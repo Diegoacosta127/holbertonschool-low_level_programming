@@ -2,7 +2,6 @@
 /**
   * print_last_digit - prints last digit
   * @num: number to be checked
-  * @a: aux delivered as output
   * Return: last digit
   */
 int print_last_digit(int num)
