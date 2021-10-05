@@ -2,16 +2,22 @@
 /**
   * print_last_digit - prints last digit
   * @num: number to be checked
+  * @a: aux delivered as output
   * Return: last digit
   */
 int print_last_digit(int num)
 {
-	if (num >= -9 && num <= 9)
-	{
-		return (num);
-	}
-	else
-	{
-		return (num % 10);
-	}
+	int a;
+
+	if (num < 0)
+		num = -num;
+	
+	a = num %10;
+	
+	if (a < 0)
+		a = -a;
+
+	_putchar(a + 48);
+
+	return (a)
 }
