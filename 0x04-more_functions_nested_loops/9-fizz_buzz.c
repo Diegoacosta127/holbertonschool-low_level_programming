@@ -7,7 +7,7 @@ int main(void)
 {
 	int i;
 
-	for (i = 0; 1 < 100; i++)
+	for (i = 0; i < 100; i++)
 	{
 		if (i % 3 != 0 && i % 5 != 0)
 		{
@@ -22,5 +22,6 @@ int main(void)
 		}
 		printf(" ");
 	}
+	putchar(10);
 	return (0);
 }
