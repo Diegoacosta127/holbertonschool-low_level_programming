@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-  * print_line - drwas a straight line eith length "n", followed by a new line
+  * print_line - draws a straight line with length "n", followed by a new line
   * @n: input for length of the line
   * Return: void
   */
