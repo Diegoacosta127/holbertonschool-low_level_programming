@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
-  * main - prints the numbers from 1 to 100, followed by a new line, n%3="Fizz", n%5="Buzz"
+  * main - prints numbers from 1 to 100, n%3="Fizz", n%5="Buzz"
   * Return: always 0
   */
 int main(void)
