@@ -16,9 +16,9 @@ int main(void)
 		else
 		{
 			if (i % 3 == 0)
-				printf("%d", i);
+				printf("Fizz");
 			if (i % 5 == 0)
-				printf("%d", i);
+				printf("Buzz");
 		}
 		printf(" ");
 	}
