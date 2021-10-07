@@ -20,7 +20,8 @@ int main(void)
 			if (i % 5 == 0)
 				printf("Buzz");
 		}
-		printf(" ");
+		if (i < 100)
+			printf(" ");
 	}
 	putchar(10);
 	return (0);
