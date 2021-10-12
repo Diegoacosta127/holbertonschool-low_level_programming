@@ -4,7 +4,7 @@
   * @str: string to be half-printed
   * Return: void
   */
-int _strlen(char *s);
+int _strlen(char *str);
 void puts2(char *str)
 {
 	int i;
