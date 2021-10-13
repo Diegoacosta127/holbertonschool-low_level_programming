@@ -4,15 +4,20 @@
   * @str: string to be half-printed
   * Return: void
   */
-int _strlen(char *str);
 void puts2(char *str)
 {
-	int i;
+	int a;
 
-	for (i = 0; i < _strlen(str); i++)
+	a = 0;
+
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		if (i % 2 == 0)
-			_putchar(*(str + i));
+		a++;
 	}
+	for (i = 0; i <= a - 1; i += 2)
+	{
+		_putchar(str[i]);
+	}
+
 	_putchar(10);
 }
