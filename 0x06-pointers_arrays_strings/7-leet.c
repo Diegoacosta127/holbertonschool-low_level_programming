@@ -8,25 +8,23 @@ char *leet(char *elite)
 {
 	int i;
 	int j;
-	char aeotl[];
-	char AEOTL[];
-	char numbers[];
+	char aeotl[] = "aeotl";
+	char AEOTL[] = "AEOTL";
+	char numbers[] = "43071";
 
 	i = 0;
-	aeotl = "aeotl";
-	AEOTL = "AEOTL";
-	numbers = "43071";
 
 	while (*(elite + i) != '\0')
 	{
 		for (j = 0; aeotl[j] != '\0'; j++)
 		{
 			if (*(elite + i) == aeotl[j] ||
-					*(elite + i) == aeotl[j])
+			  *(elite + i) == AEOTL[j])
 			{
 				*(elite + i) = numbers[j];
 			}
 		}
 		i++;
 	}
+	return (elite);
 }
