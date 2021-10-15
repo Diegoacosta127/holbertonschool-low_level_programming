@@ -9,6 +9,10 @@ char *cap_string(char *input)
 	int i;
 
 	i = 0;
+	if (*input > 96 && *input < 123)
+	{
+		*input = *input - 32;
+	}
 	while (*(input + i) != '\0')
 	{
 		if ((*(input + i) == 32 || *(input + i) == 9 ||
