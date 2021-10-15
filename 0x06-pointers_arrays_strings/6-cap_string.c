@@ -24,7 +24,7 @@ char *cap_string(char *input)
 					*(input + i) == 123 ||
 					*(input + i) == 124) &&
 				*(input + i + 1) > 96 &&
-				*(input + i) < 123)
+				*(input + i + 1) < 123)
 		{
 			*(input + i + 1) = *(input + i + 1) - 32;
 		}
