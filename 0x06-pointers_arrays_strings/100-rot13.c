@@ -3,7 +3,7 @@
   * rot13 - encodes a string using rot13
   * @s: string to be encoded
   * Return: string encoded
- 0 */
+  */
 char *rot13(char *s)
 {
 	int i;
@@ -21,11 +21,8 @@ char *rot13(char *s)
 				*(s + i) = *(s + i) - 13;
 				break;
 			}
-			else
-			{
-				*(s + i) = *(s + i) + 13;
+			*(s + i) = *(s + i) + 13;
 				break;
-			}
 		}
 		i++;
 	}
