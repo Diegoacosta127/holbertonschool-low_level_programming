@@ -6,21 +6,6 @@
  0 */
 char *rot13(char *s)
 {
-	/*
-	int i, j;
-	char rot[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
-	char alpha[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnoprstuvwxyz";
-
-	for (i = 0; *(s + i) != '\0'; i++)
-	{
-		for (j = 0; alpha[j] != '\0'; j++)
-		{
-			if (*(s + i) == alpha[j])
-			{
-				*(s + i) = rot[j];
-			}
-		}
-	}*/
 	int i;
 
 	i = 0;
