@@ -22,10 +22,9 @@ char *_strpbrk(char *s, char *accept)
 		}
 		i++;
 	}
-	i -= 1;
 	if (*(s + i) == *(accept + j))
 	{
-		return (s + i);
+		return (s + i - 1);
 	}
 	else
 	{
