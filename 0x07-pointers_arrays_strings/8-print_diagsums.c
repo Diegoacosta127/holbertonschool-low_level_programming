@@ -9,6 +9,7 @@
 void print_diagsums(int *a, int size)
 {
 	int x, y, cont1, cont2;
+
 	cont1 = 0;
 	cont2 = 0;
 
