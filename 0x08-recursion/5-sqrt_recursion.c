@@ -19,7 +19,7 @@ int aux(int b, int a)
 		}
 		else
 		{
-			return(aux(b, a + 1));
+			return (aux(b, a + 1));
 		}
 	}
 }
