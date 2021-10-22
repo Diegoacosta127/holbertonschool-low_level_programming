@@ -2,7 +2,7 @@
 /**
   * main- prints all arguments it receives
   * @argc: argument counter
-  * @arcv: argument
+  * @argv: argument
   * Return: always 0
   */
 int main(int argc, char *argv[])
