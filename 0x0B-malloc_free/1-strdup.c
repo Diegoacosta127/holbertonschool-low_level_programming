@@ -23,17 +23,10 @@ char *_strdup(char *str)
 	}
 	else
 	{
-		if (*str == NULL)
+		while (*(str + i) != '\0')
 		{
-			return (NULL);
-		}
-		else
-		{
-			while (*(str + i) != '\0')
-			{
-				*(p + i) = *(str + i);
-				i++;
-			}
+			*(p + i) = *(str + i);
+			i++;
 		}
 	}
 	return (p);
