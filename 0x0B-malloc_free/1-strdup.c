@@ -17,6 +17,10 @@ char *_strdup(char *str)
 		return (NULL);
 	}
 	i = 0;
+	if (str == NULL)
+	{
+		return (NULL);
+	}
 	if (*str == '\0')
 	{
 		*p = '\0';
