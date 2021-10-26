@@ -30,26 +30,7 @@ char *str_concat(char *s1, char *s2)
 	{
 		ls2++;
 	}
-	if (s1 == NULL && s2 == NULL)
-	{
-		p = malloc(0);
-	}
-	else
-	{
-		if (s1 == NULL)
-		{
-			p = malloc(sizeof(s2) * ls2 + 1);
-		}
-		if (s2 == NULL)
-		{
-			p = malloc(sizeof(s1) * ls1 + 1);
-		}
-		else
-		{
-			p = malloc((sizeof(s1) * ls1) + (sizeof(s2) * ls2)
-					+ 1);
-		}
-	}
+	p = malloc((sizeof(s1) * ls1) + (sizeof(s2) * ls2) + 1);
 	if (p == NULL)
 	{
 		return (NULL);
