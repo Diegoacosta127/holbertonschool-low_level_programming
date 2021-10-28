@@ -17,9 +17,10 @@ int *array_range(int min, int max)
 	if (!p)
 		return (NULL);
 	diff = max - min;
-	for (a = 0; a <= diff; a++)
+	for (a = 0; a < diff; a++)
 	{
 		*(p + a) = min + a;
 	}
+	*(p + a) = min + a;
 	return (p);
 }
