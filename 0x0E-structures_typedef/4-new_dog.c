@@ -3,6 +3,24 @@
 #include <stdio.h>
 #include <string.h>
 /**
+  * _strlen - length of a string
+  * @s: pointer to char
+  * Return: length of a string
+  */
+int _strlen(char *s)
+{
+	int i;
+
+	i = 0;
+
+	while (*s != '\0')
+	{
+		i++;
+		s++;
+	}
+	return (i);
+}
+/**
   * _strdup - returns pointer to newly allocated space in memo
   * @str: string to be copied
   * Return: pointer to memo. alloc., NULL if str = NULL or if insufficiente mem
@@ -16,7 +34,7 @@ char *_strdup(char *str)
 	{
 		return (NULL);
 	}
-	p = malloc((sizeof(char) * strlen(str)) + 1);
+	p = malloc((sizeof(char) * _strlen(str)) + 1);
 	if (p == NULL)
 	{
 		return (NULL);
