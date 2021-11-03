@@ -20,14 +20,12 @@ int (*get_op_func(char *s))(int, int)
 	int i;
 
 	i = 0;
-	while (s[0] != ops[i].op[0] && i < 6)
+	while (ops[i].op[0])
 	{
+		if (s[0] == ops[i].op[0] && !s[1])
+			return (*(ops[i].f));
 		i++;
 	}
-	if (i >= 5 || s[1])
-	{
-		printf("Error\n");
-		exit(99);
-	}
-	return (*(ops[i].f));
+	printf("Error\n");
+	exit(99);
 }
