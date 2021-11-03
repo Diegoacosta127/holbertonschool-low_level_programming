@@ -1,3 +1,5 @@
+#ifndef DOUU_H
+#define DOUU_H
 #include "3-calc.h"
 #include <stdlib.h>
 #include <stdio.h>
@@ -20,14 +22,15 @@ int (*get_op_func(char *s))(int, int)
 	int i;
 
 	i = 0;
-	while (s[0] != ops[i].op[0] && i < 6)
+	while (i <= 4 && s[0] != ops[i].op[0])
 	{
 		i++;
 	}
-	if (i >= 5 || s[1])
+	if (i >= 4 || s[1])
 	{
 		printf("Error\n");
 		exit(99);
 	}
-	return ((ops[i].f));
+	return (ops[i].f);
 }
+#endif
