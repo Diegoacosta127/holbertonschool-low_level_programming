@@ -26,7 +26,7 @@ int (*get_op_func(char *s))(int, int)
 	{
 		i++;
 	}
-	if (i >= 4 || s[1])
+	if (i > 4 || s[1])
 	{
 		printf("Error\n");
 		exit(99);
