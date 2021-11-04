@@ -10,18 +10,14 @@
 void print_all(const char * const format, ...)
 {
 	char *auxs, *separator;
-	int a;
-	int counter;
+	int a = 0;
+	int counter = 0;
 	va_list list;
 
-	a = 0;
-	counter = 0;
 	separator = ", ";
 	va_start(list, format);
 	while (format && format[counter])
-	{
 		counter++;
-	}
 	while (format && format[a])
 	{
 		if (a == counter - 1)
