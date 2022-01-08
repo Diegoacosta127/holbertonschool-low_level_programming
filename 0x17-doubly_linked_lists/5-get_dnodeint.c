@@ -1,5 +1,21 @@
 #include "lists.h"
 /**
+  * dlistint_len - returns the number of elements in a linked dlistint_t list
+  * @h: pointer to dlistint_t
+  * Return: numbert of elements
+  */
+size_t dlistint_len(const dlistint_t *h)
+{
+	size_t num = 0;
+
+	while (h)
+	{
+		h = h->next;
+		num++;
+	}
+	return (num);
+}
+/**
   * get_dnodeint_at_index - returns the nth node of a dlistint_t linked list
   * @head: pointer to dlistint_t linked list
   * @index: index of the node, starting from 0
@@ -7,23 +23,16 @@
   */
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
-	dlistint_t *aux = head;
-	unsigned int len = 0, idx = 0;
+	dlistint_t *aux = NULL;
+	unsigned int len = dlistint_len(head), idx = 0;
 
-	if (!head)
+	if (!head || index >= len)
 		return (NULL);
-	while (head)
+	aux = head;
+	while (idx < index)
 	{
-		len++;
-		head = head->next;
-	}
-	if (index > len)
-		return (NULL);
-	while (aux)
-	{
+		aux->prev = aux;
 		aux = aux->next;
-		if (idx == index - 1)
-			return (aux);
 		idx++;
 	}
 	return (aux);
