@@ -13,17 +13,17 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *new_node;
 
 	if (!value || !ht)
-		return 0;
+		return (0);
 	dupkey = (const unsigned char *)strdup(key);
 	idxkey = key_index(dupkey, ht->size);
-	new_node = malloc(sizeof(* new_node));
+	new_node = malloc(sizeof(*new_node));
 	if (!new_node)
 	{
-		return 0;
+		return (0);
 	}
 	new_node->key = (char *)dupkey;
 	new_node->value = strdup(value);
 	new_node->next = ht->array[idxkey];
 	ht->array[idxkey] = new_node;
-	return 1;
+	return (1);
 }
