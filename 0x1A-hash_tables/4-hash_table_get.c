@@ -12,8 +12,11 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	if (!ht || !key)
 		return (NULL);
 	auxkey = key_index((const unsigned char *)key, ht->size);
-	if (ht->array[auxkey])
-		return (ht->array[auxkey]->value);
-	else
-		return (NULL);
+	while (ht->array[auxkey])
+	{
+		if(strcmp(ht->array[auxkey]->key, key) == 0)
+			return (ht->array[auxkey]->value);
+		ht->array[auxkey] = ht->array[auxkey]->next;
+	}
+	return (NULL);
 }
