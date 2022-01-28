@@ -8,36 +8,24 @@
   */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	const unsigned char *dupkey;
 	unsigned long int idxkey;
 	hash_node_t *new_node;
 
 	if (!value || !ht)
 		return (0);
-	dupkey = (const unsigned char *)strdup(key);
-	idxkey = key_index(dupkey, ht->size);
-	if (ht->array[idxkey])
+	idxkey = key_index((unsigned char *)key, ht->size);
+	if (ht->array[idxkey] && strcmp(ht->array[idxkey]->key, key) == 0)
 	{
-		new_node = ht->array[idxkey];
-		while (new_node)
-		{
-			if (new_node->key == key)
-			{
-				new_node->value = (char *)value;
-				return (1);
-			}
-			else
-			{
-				new_node = new_node->next;
-			}
-		}
+		free(ht->array[idxkey]->value);
+		ht->array[idxkey]->value = strdup(value);
+		return (1);
 	}
 	new_node = malloc(sizeof(*new_node));
 	if (!new_node)
 	{
 		return (0);
 	}
-	new_node->key = (char *)dupkey;
+	new_node->key = strdup(key);
 	new_node->value = strdup(value);
 	new_node->next = ht->array[idxkey];
 	ht->array[idxkey] = new_node;
