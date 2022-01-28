@@ -21,6 +21,19 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		return (0);
 	}
+	while (ht->array[idxkey])
+	{
+		if (key == ht->array[idxkey]->key)
+		{
+			ht->array[idxkey]->value = (char *)value;
+			return (1);
+		}
+		else
+		{
+			ht->array[idxkey] = ht->array[idxkey]->next;
+		}
+	}
+
 	new_node->key = (char *)dupkey;
 	new_node->value = strdup(value);
 	new_node->next = ht->array[idxkey];
