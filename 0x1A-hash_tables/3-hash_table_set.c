@@ -19,7 +19,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (ht->array[idxkey])
 	{
 		new_node = ht->array[idxkey];
-		while(new_node)
+		while (new_node)
 		{
 			if (new_node->key == key)
 			{
