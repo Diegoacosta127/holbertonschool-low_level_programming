@@ -19,10 +19,12 @@ oclean:
 	$(RM) -f $(OBJ)
 
 fclean:
-	$(RM) -f *~ $(NAME) $(OBJ)
-
-re:
-	fclean all
+	$(RM) -f *~ $(NAME)
+	$(RM) -f $(OBJ)
 
 $(NAME): $(OBJ) m.h
 	$(CC) $(OBJ) -o $(NAME)
+
+re:
+	$(RM) -f $(OBJ)
+	$(CC) $(SRC) -o $(NAME)
