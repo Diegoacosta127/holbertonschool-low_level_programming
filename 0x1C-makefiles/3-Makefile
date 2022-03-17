@@ -12,13 +12,17 @@ RM = rm
 
 all: $(NAME)
 
+clean:
+	$(RM) -f *~ $(NAME)
+
+oclean:
+	$(RM) -f $(OBJ)
+
+fclean:
+	$(RM) -f *~ $(NAME) $(OBJ)
+
+re:
+	fclean all
+
 $(NAME): $(OBJ) m.h
 	$(CC) $(OBJ) -o $(NAME)
-
-clean: $(RM) -f *~ $(NAME)
-
-oclean: $(RM) -f $(OBJ)
-
-fclean: $(RM) -f *~ $(NAME) $(OBJ)
-
-re: fclean all
