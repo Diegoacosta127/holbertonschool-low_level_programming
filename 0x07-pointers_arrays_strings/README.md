@@ -1,6 +1,6 @@
 # 0x07. C - Even more pointers, arrays and strings
 ![yo_dawg](58fe6b229144b7fe5ebe88afe9ff5cabe2dd0863e1e79b2d02b4103c30b465dd.jpg)
-## Reqirements
+## Requirements
 ### General
 * Allowed editors: `vi`, `vim`, `emacs`
 * All your files will be compiled on Ubuntu 20.04 LTS using `gcc`, using the options `-Wall -Werror -Wextra -pedantic -std=gnu89`
